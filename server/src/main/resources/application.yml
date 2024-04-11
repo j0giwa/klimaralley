@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: klimaralley-server
+  task:
+    scheduling:
+      thread-name-prefix: scheduling-
+      pool:
+        size: 10
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/
+    username: root
+    password: # no password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  sql:
+    init:
+      mode: always
+  servlet:
+    multipart:
+      max-file-size: 40MB
+      max-request-size: 40MB
