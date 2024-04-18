@@ -1,14 +1,11 @@
 # klimaralley
 
-
-
-
 # Development 
-A short explanation how to work on this repo if you never worked with submodules before.
-A submodule is a gitrepostory inside a gitrepository, their state is tracked seperately.
+A short explanation on how to work on this repository, if you never worked with submodules before.
+A submodule is in a nutshell a Git repostory inside another Git repository, their state is tracked seperately.
 
 ## Cloning
-Because this repository that contains submodules, you need to take an extra step to ensure that the submodules are also cloned.
+Because this repository that contains submodules, you need to take an extra step to ensure that the submodules are also cloned (downloaded).
 This is done using the `--recurse-submodules` flag:
 ```
 git clone --recurse-submodules https://github.com/j0giwa/klimaralley
@@ -24,7 +21,7 @@ One thing to keep in mind is that if you make changes to a submodule, those chan
 You need to explicitly commit the new version of the submodule to the main repository.
 ```
 cd .. # go to main-repository
-git add submodule
+git add submodule # replace 'submodule' with the name of the submodule (obviously)
 git commit -m "Updated submodule to latest version"
 ```
 By doing this, you're telling Git that the submodule is now at a new state, and you want to record that change in the main repository.
