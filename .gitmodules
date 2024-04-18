@@ -1,0 +1,6 @@
+[submodule "klimaralley-server"]
+	path = klimaralley-server
+	url = git@github.com:j0giwa/klimaralley-server
+[submodule "klimaralley-wasserarm"]
+	path = klimaralley-wasserarm
+	url = git@github.com:j0giwa/klimaralley-wasserarm
