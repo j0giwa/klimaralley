@@ -2,5 +2,5 @@
 
 # Cloning
 ```
-git clone git clone --recurse-submodules https://github.com/j0giwa/klimaralley
+git clone --recurse-submodules https://github.com/j0giwa/klimaralley
 ```
