@@ -4,3 +4,6 @@
 [submodule "klimaralley-wasserarm"]
 	path = klimaralley-wasserarm
 	url = https://github.com/j0giwa/klimaralley-wasserarm
+[submodule "klimaralley-recycling"]
+	path = klimaralley-recycling
+	url = https://github.com/j0giwa/klimaralley-recycling.git
