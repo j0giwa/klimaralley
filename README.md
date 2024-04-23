@@ -1,5 +1,10 @@
 # klimaralley
 
+# Project Struckture
+- klimaralley-server (central backendserver)
+- klimaralley-recycling (recylcing game)
+- klimaralley-wasserarm (wasserarm-satt game)
+
 # Development 
 A short explanation on how to work on this repository, if you never worked with submodules before.
 A submodule is in a nutshell a Git repostory inside another Git repository, their state is tracked seperately.
