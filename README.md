@@ -1,9 +1,21 @@
 # klimaralley
 
 # Project Struckture
-- klimaralley-server (central backendserver)
+- klimaralley-hub (main appp taht connects the games)
 - klimaralley-recycling (recylcing game)
 - klimaralley-wasserarm (wasserarm-satt game)
+- klimaralley-server (central backendserver)
+
+# stack
+
+## frontend
+- vite
+- react
+- tailwind
+- daisyui
+
+## backend
+- spring boot
 
 # Development 
 A short explanation on how to work on this repository, if you never worked with submodules before.
