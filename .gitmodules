@@ -7,3 +7,6 @@
 [submodule "klimaralley-recycling"]
 	path = klimaralley-recycling
 	url = https://github.com/j0giwa/klimaralley-recycling.git
+[submodule "klimaralley-hub"]
+	path = klimaralley-hub
+	url = https://github.com/j0giwa/klimaralley-hub.git
