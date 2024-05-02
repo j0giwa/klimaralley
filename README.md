@@ -1,7 +1,9 @@
 # klimaralley
 
 # Project Struckture
-- klimaralley-hub (main appp taht connects the games)
+![structure diagramm](https://github.com/j0giwa/klimaralley/blob/master/doc/server_archtecture_diagram.drawio.png?raw=true)
+
+- klimaralley-hub (main-app that connects the games)
 - klimaralley-recycling (recylcing game)
 - klimaralley-wasserarm (wasserarm-satt game)
 - klimaralley-server (central backendserver)
