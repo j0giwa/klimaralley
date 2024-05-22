@@ -8,6 +8,7 @@
 - klimaralley-hub (main-app that connects the games)
 - klimaralley-recycling (recycling game)
 - klimaralley-wasserarm (wasserarm-satt game)
+- klimaralley-flut (die flut kommt game)
 
 # stack
 
