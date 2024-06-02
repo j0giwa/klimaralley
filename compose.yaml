@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  mysqldb:
+    image: mysql:8.0
+    container_name: mysqldb
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+      MYSQL_DATABASE: klimaralley
+    ports:
+      - "3306:3306"
+    networks:
+      - klimanetwork
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+        
+  spring:
+    container_name: klimaserver
+    depends_on:
+      mysqldb:
+        condition: service_healthy
+    build:
+      context: klimaralley-server
+      dockerfile: Dockerfile
+    image: klimaserver:latest
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/klimaralley
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: ''
+    networks:
+      - klimanetwork
+
+networks:
+  klimanetwork:
+    driver: bridge
