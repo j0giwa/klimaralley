@@ -10,6 +10,6 @@
 [submodule "klimaralley-hub"]
 	path = klimaralley-hub
 	url = https://github.com/j0giwa/klimaralley-hub.git
-[submodule "Flut"]
-	path = Flut
+[submodule "klimaralley-flut"]
+	path = klimaralley-flut
 	url = https://github.com/cbu-byte/Flut
