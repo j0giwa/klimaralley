@@ -1,9 +1,20 @@
 version: '3.8'
 
 services:
+  dnsmasq:
+    container_name: dnsmasq
+    image: andyshinn/dnsmasq:latest
+    ports:
+      - "53:53/udp"
+    volumes:
+      - ./dnsmasq.conf:/etc/dnsmasq.conf
+    command: ["-k"]
+    networks:
+      - klimanetwork
+
   mysqldb:
+    container_name: asgard
     image: mysql:8.0
-    container_name: mysqldb
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
       MYSQL_DATABASE: klimaralley
@@ -18,7 +29,7 @@ services:
       retries: 5
         
   spring:
-    container_name: klimaserver
+    container_name: bifrost
     depends_on:
       mysqldb:
         condition: service_healthy
@@ -34,6 +45,77 @@ services:
       SPRING_DATASOURCE_PASSWORD: ''
     networks:
       - klimanetwork
+
+  klimaralley-hub:
+    container_name: klimaralley
+    image: klimaralley-hub:latest
+    build:
+      context: ./klimaralley-hub
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - klimanetwork
+    depends_on:
+      - dnsmasq
+      - spring
+
+  klimaralley-flut:
+    container_name: flut
+    image: klimaralley-flut:latest
+    build:
+      context: klimaralley-flut
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3000"
+    networks:
+      - klimanetwork
+    depends_on:
+      - dnsmasq
+      - spring
+
+  klimaralley-recycling:
+    container_name: recycling
+    image: klimaralley-recycling:latest
+    build:
+      context: klimaralley-recycling
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3000"
+    networks:
+      - klimanetwork
+    depends_on:
+      - dnsmasq
+      - spring
+
+  klimaralley-wasserarm:
+    container_name: wasserarm
+    image: klimaralley-wasserarm:latest
+    build:
+      context: klimaralley-wasserarm
+      dockerfile: Dockerfile
+    ports:
+      - "3003:3000"
+    networks:
+      - klimanetwork
+    depends_on:
+      - dnsmasq
+      - spring
+
+  nginx:
+    container_name: midgard
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - klimanetwork
+    depends_on:
+      - klimaralley-flut
+      - klimaralley-hub
+      - klimaralley-recycling
+      - klimaralley-wasserarm
 
 networks:
   klimanetwork:
