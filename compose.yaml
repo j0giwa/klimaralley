@@ -1,17 +1,6 @@
 version: '3.8'
 
 services:
-  #dnsmasq:
-  #  container_name: dnsmasq
-  #  image: andyshinn/dnsmasq:latest
-  #  ports:
-  #    - "53:53/udp"
-  #  volumes:
-  #    - ./dnsmasq.conf:/etc/dnsmasq.conf
-  #  command: ["-k"]
-  #  networks:
-  #    - klimanetwork
-
   mysqldb:
     container_name: asgard
     image: mysql:8.0
@@ -100,8 +89,8 @@ services:
     networks:
       - klimanetwork
     depends_on:
-      - klimaralley-flut
       - klimaralley-hub
+      - klimaralley-flut
       - klimaralley-recycling
       - klimaralley-wasserarm
 
