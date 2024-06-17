@@ -1,16 +1,16 @@
 version: '3.8'
 
 services:
-  dnsmasq:
-    container_name: dnsmasq
-    image: andyshinn/dnsmasq:latest
-    ports:
-      - "53:53/udp"
-    volumes:
-      - ./dnsmasq.conf:/etc/dnsmasq.conf
-    command: ["-k"]
-    networks:
-      - klimanetwork
+  #dnsmasq:
+  #  container_name: dnsmasq
+  #  image: andyshinn/dnsmasq:latest
+  #  ports:
+  #    - "53:53/udp"
+  #  volumes:
+  #    - ./dnsmasq.conf:/etc/dnsmasq.conf
+  #  command: ["-k"]
+  #  networks:
+  #    - klimanetwork
 
   mysqldb:
     container_name: asgard
@@ -52,12 +52,9 @@ services:
     build:
       context: ./klimaralley-hub
       dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
     networks:
       - klimanetwork
     depends_on:
-      - dnsmasq
       - spring
 
   klimaralley-flut:
@@ -66,12 +63,9 @@ services:
     build:
       context: klimaralley-flut
       dockerfile: Dockerfile
-    ports:
-      - "3001:3000"
     networks:
       - klimanetwork
     depends_on:
-      - dnsmasq
       - spring
 
   klimaralley-recycling:
@@ -80,12 +74,9 @@ services:
     build:
       context: klimaralley-recycling
       dockerfile: Dockerfile
-    ports:
-      - "3002:3000"
     networks:
       - klimanetwork
     depends_on:
-      - dnsmasq
       - spring
 
   klimaralley-wasserarm:
@@ -94,12 +85,9 @@ services:
     build:
       context: klimaralley-wasserarm
       dockerfile: Dockerfile
-    ports:
-      - "3003:3000"
     networks:
       - klimanetwork
     depends_on:
-      - dnsmasq
       - spring
 
   nginx:
