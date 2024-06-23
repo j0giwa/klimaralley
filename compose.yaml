@@ -1,8 +1,6 @@
-version: '3.8'
-
 services:
   mysqldb:
-    container_name: asgard
+    container_name: mimir
     image: mysql:8.0
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
@@ -10,15 +8,29 @@ services:
     ports:
       - "3306:3306"
     networks:
-      - klimanetwork
+      - bifrost
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 10s
       timeout: 5s
       retries: 5
+
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin/phpmyadmin:latest
+    environment:
+      PMA_HOST: mysqldb
+      PMA_ABSOLUTE_URI: http://localhost:8081/
+    ports:
+      - "8081:80"
+    networks:
+      - bifrost
+    depends_on:
+      mysqldb:
+        condition: service_healthy 
         
   spring:
-    container_name: bifrost
+    container_name: asgard
     depends_on:
       mysqldb:
         condition: service_healthy
@@ -33,7 +45,7 @@ services:
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: ''
     networks:
-      - klimanetwork
+      - bifrost
 
   klimaralley-hub:
     container_name: klimaralley
@@ -42,7 +54,7 @@ services:
       context: ./klimaralley-hub
       dockerfile: Dockerfile
     networks:
-      - klimanetwork
+      - bifrost
     depends_on:
       - spring
 
@@ -53,7 +65,7 @@ services:
       context: klimaralley-flut
       dockerfile: Dockerfile
     networks:
-      - klimanetwork
+      - bifrost
     depends_on:
       - spring
 
@@ -64,7 +76,7 @@ services:
       context: klimaralley-recycling
       dockerfile: Dockerfile
     networks:
-      - klimanetwork
+      - bifrost
     depends_on:
       - spring
 
@@ -75,7 +87,7 @@ services:
       context: klimaralley-wasserarm
       dockerfile: Dockerfile
     networks:
-      - klimanetwork
+      - bifrost
     depends_on:
       - spring
 
@@ -87,7 +99,7 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
     networks:
-      - klimanetwork
+      - bifrost
     depends_on:
       - klimaralley-hub
       - klimaralley-flut
@@ -95,5 +107,5 @@ services:
       - klimaralley-wasserarm
 
 networks:
-  klimanetwork:
+  bifrost:
     driver: bridge
