@@ -42,9 +42,7 @@ One thing to keep in mind is that if you make changes to a submodule, those chan
 You need to explicitly commit the new version of the submodule to the main repository.
 
 
-##Design Template
-That is the link to the design template for all who want to customize to their own project. Make sure to be registered as student i.e. with your university adress.
-link: https://www.figma.com/design/Ln7LYih8IQdxpfCRG3nczu/Design_Template?node-id=0-1&t=MJKa0BzZQG7Ef6rE-1
+
 
 ```
 cd .. # go to main-repository
@@ -52,3 +50,7 @@ git add submodule # replace 'submodule' with the name of the submodule (obviousl
 git commit -m "Updated submodule to latest version"
 ```
 By doing this, you're telling Git that the submodule is now at a new state, and you want to record that change in the main repository.
+
+## Design Template
+That is the link to the design template for all who want to customize to their own project. Make sure to be registered as student i.e. with your university adress.
+link: https://www.figma.com/design/Ln7LYih8IQdxpfCRG3nczu/Design_Template?node-id=0-1&t=MJKa0BzZQG7Ef6rE-1
