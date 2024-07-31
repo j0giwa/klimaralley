@@ -10,4 +10,4 @@ git submodule foreach --recursive '
   git reset --hard origin/master'
 
 # Update the services
-docker-compose up -d --no-deps --build spring klimaralley-hub klimaralley-flut klimaralley-recycling klimaralley-wasserarm
+docker compose up -d --no-deps --build spring klimaralley-hub klimaralley-flut klimaralley-recycling klimaralley-wasserarm
