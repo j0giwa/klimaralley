@@ -1,15 +1,5 @@
 # klimaralley
 
-# Project Struckture
-![deployment diagramm](https://github.com/j0giwa/klimaralley/blob/master/doc/deployment.drawio.png?raw=true)
-- midgard (nginx reverse proxy)
-- mimir (database server)
-- klimaralley-server (central backendserver), codename: Asgard
-- klimaralley-hub (main-app that connects the games)
-- klimaralley-recycling (recycling game)
-- klimaralley-wasserarm (wasserarm-satt game)
-- klimaralley-flut (die flut kommt game)
-
 # stack
 
 ## frontend
