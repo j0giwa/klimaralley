@@ -1,48 +1,134 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 OPR/109.0.0.0" version="24.7.7">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 OPR/112.0.0.0" scale="1" border="0" version="24.7.7">
   <diagram name="Page-1" id="IbEQeKj_McPke4w-xEGC">
-    <mxGraphModel dx="1857" dy="1052" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1990" dy="1126" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="k0RXGG7jA4YN6tqX4Mhr-10" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;waterAPI&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;GET:&amp;nbsp; /water/items&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;GET: /water/eater&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;GET: /water/water&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;GET: /water/coins&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;POST: /water/score&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;PATCH: /water/water&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="890" y="640" width="200" height="140" as="geometry" />
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-1" value="Wasserarm classes" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=160;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1640" height="1150" as="geometry" />
         </mxCell>
-        <mxCell id="k0RXGG7jA4YN6tqX4Mhr-27" value="&lt;div&gt;WasserarmShopItem&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="120" y="280" width="200" height="140" as="geometry">
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-5" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;de.thowl.klimaralley.server.wasserarm.storage&lt;/span&gt;" style="shape=folder;fontStyle=1;tabWidth=260;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=1;collapsible=0;recursiveResize=0;whiteSpace=wrap;" vertex="1" parent="C9hfbqxZXzc94mt0s5pp-1">
+          <mxGeometry x="40" y="80" width="680" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-7" value="&lt;div&gt;WasserarmShopItem&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="C9hfbqxZXzc94mt0s5pp-5">
+          <mxGeometry x="50" y="50" width="200" height="140" as="geometry">
             <mxRectangle x="440" y="640" width="110" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="k0RXGG7jA4YN6tqX4Mhr-28" value="&lt;div&gt;+ id: long&lt;/div&gt;&lt;div&gt;+ name: String&lt;/div&gt;&lt;div&gt;+ type: enum&lt;/div&gt;&lt;div&gt;+ water: int&lt;br&gt;+ price: int&lt;/div&gt;&lt;div&gt;+ webp: byte[]&lt;/div&gt;&lt;div&gt;+ icon: String&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="k0RXGG7jA4YN6tqX4Mhr-27" vertex="1">
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-8" value="&lt;div&gt;+ id: long&lt;/div&gt;&lt;div&gt;+ name: String&lt;/div&gt;&lt;div&gt;+ type: enum&lt;/div&gt;&lt;div&gt;+ water: int&lt;br&gt;+ price: int&lt;/div&gt;&lt;div&gt;+ webp: byte[]&lt;/div&gt;&lt;div&gt;+ icon: String&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="C9hfbqxZXzc94mt0s5pp-7">
           <mxGeometry y="26" width="200" height="114" as="geometry" />
         </mxCell>
-        <mxCell id="k0RXGG7jA4YN6tqX4Mhr-31" value="Eater" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="120" y="520" width="200" height="100" as="geometry" />
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-9" value="Eater" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="C9hfbqxZXzc94mt0s5pp-5">
+          <mxGeometry x="360" y="70" width="200" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="k0RXGG7jA4YN6tqX4Mhr-32" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- id: long&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- name: String&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- eaterDiet: enum&lt;/div&gt;&lt;div&gt;- preferences: Item[]&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="k0RXGG7jA4YN6tqX4Mhr-31" vertex="1">
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-10" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- id: long&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- name: String&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- eaterDiet: enum&lt;/div&gt;&lt;div&gt;- preferences: Item[]&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="C9hfbqxZXzc94mt0s5pp-9">
           <mxGeometry y="26" width="200" height="74" as="geometry" />
         </mxCell>
-        <mxCell id="k0RXGG7jA4YN6tqX4Mhr-35" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="k0RXGG7jA4YN6tqX4Mhr-27" target="k0RXGG7jA4YN6tqX4Mhr-31" edge="1">
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-11" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="C9hfbqxZXzc94mt0s5pp-5" source="C9hfbqxZXzc94mt0s5pp-8" target="C9hfbqxZXzc94mt0s5pp-10">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="380" y="340" as="sourcePoint" />
-            <mxPoint x="430" y="290" as="targetPoint" />
+            <mxPoint x="240" y="160" as="sourcePoint" />
+            <mxPoint x="290" y="110" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="k0RXGG7jA4YN6tqX4Mhr-36" value="storage" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" parent="1" vertex="1">
-          <mxGeometry x="80" y="240" width="280" height="200" as="geometry" />
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-26" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;EaterRepository&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ save(eater: Eater): void&lt;br&gt;+ delete(eater: Eater): void&lt;br&gt;+ findById(id: long):&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Eater&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ countAll(): long&lt;br&gt;+ clear(): void&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="C9hfbqxZXzc94mt0s5pp-5">
+          <mxGeometry x="375" y="210" width="170" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="k0RXGG7jA4YN6tqX4Mhr-37" value="ćore" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" parent="1" vertex="1">
-          <mxGeometry x="80" y="482.5" width="580" height="407.5" as="geometry" />
-        </mxCell>
-        <mxCell id="k0RXGG7jA4YN6tqX4Mhr-38" value="ćore" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" parent="1" vertex="1">
-          <mxGeometry x="850" y="540" width="280" height="310" as="geometry" />
-        </mxCell>
-        <mxCell id="k0RXGG7jA4YN6tqX4Mhr-40" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;WaterService&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getAll(): List&amp;lt;WasserarmShopItem&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ generateEater(): Eater&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getEater(id: long): Eater&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getWater(id: long): int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ addWater(id: long; amount: int)&lt;br&gt;+ getCoins(id: long)&lt;br&gt;+ getScore(eaterId: long, items:&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;WasserarmShopItem[], playercons: int, playerwater: int)&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="120" y="670" width="480" height="182.5" as="geometry" />
-        </mxCell>
-        <mxCell id="k0RXGG7jA4YN6tqX4Mhr-41" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="k0RXGG7jA4YN6tqX4Mhr-40" target="k0RXGG7jA4YN6tqX4Mhr-10" edge="1">
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-27" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="C9hfbqxZXzc94mt0s5pp-5" source="C9hfbqxZXzc94mt0s5pp-26" target="C9hfbqxZXzc94mt0s5pp-9">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="520" y="520" as="sourcePoint" />
-            <mxPoint x="570" y="470" as="targetPoint" />
+            <mxPoint x="540" y="240" as="sourcePoint" />
+            <mxPoint x="411" y="184" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-28" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ItemRepository&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ findAll()&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: List&amp;lt;WasserarmShopItem&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="C9hfbqxZXzc94mt0s5pp-5">
+          <mxGeometry x="27.5" y="230" width="245" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-29" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.499;entryY=0.999;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="C9hfbqxZXzc94mt0s5pp-5" source="C9hfbqxZXzc94mt0s5pp-28" target="C9hfbqxZXzc94mt0s5pp-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="440" as="sourcePoint" />
+            <mxPoint x="140" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-12" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;de.thowl.klimaralley.server.wasserarm.core&lt;/span&gt;" style="shape=folder;fontStyle=1;tabWidth=250;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=1;collapsible=0;recursiveResize=0;whiteSpace=wrap;" vertex="1" parent="C9hfbqxZXzc94mt0s5pp-1">
+          <mxGeometry x="40" y="560" width="590" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="k0RXGG7jA4YN6tqX4Mhr-40" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;WaterService&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getAll(): List&amp;lt;WasserarmShopItem&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ generateEater(): Eater&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getEater(id: long): Eater&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getWater(id: long): int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ addWater(id: long; amount: int)&lt;br&gt;+ getCoins(id: long)&lt;br&gt;+ getScore(eaterId: long, items:&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;WasserarmShopItem[], playercons: int, playerwater: int)&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="C9hfbqxZXzc94mt0s5pp-12" vertex="1">
+          <mxGeometry x="60" y="40" width="480" height="182.5" as="geometry" />
+        </mxCell>
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-18" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;de.thowl.klimaralley.server.web.wasserarm&lt;/span&gt;" style="shape=folder;fontStyle=1;tabWidth=240;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=1;collapsible=0;recursiveResize=0;whiteSpace=wrap;" vertex="1" parent="C9hfbqxZXzc94mt0s5pp-1">
+          <mxGeometry x="40" y="880" width="590" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="k0RXGG7jA4YN6tqX4Mhr-10" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;waterAPI&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;GET:&amp;nbsp; /water/items&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;GET: /water/eater&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;GET: /water/water&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;GET: /water/coins&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;POST: /water/score&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;PATCH: /water/water&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="C9hfbqxZXzc94mt0s5pp-18" vertex="1">
+          <mxGeometry x="200" y="61.25" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="k0RXGG7jA4YN6tqX4Mhr-41" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="C9hfbqxZXzc94mt0s5pp-1" source="k0RXGG7jA4YN6tqX4Mhr-40" target="k0RXGG7jA4YN6tqX4Mhr-10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="480" as="sourcePoint" />
+            <mxPoint x="530" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-24" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;de.thowl.klimaralley.server.auth&lt;/span&gt;" style="shape=folder;fontStyle=1;tabWidth=260;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=1;collapsible=0;recursiveResize=0;whiteSpace=wrap;" vertex="1" parent="C9hfbqxZXzc94mt0s5pp-1">
+          <mxGeometry x="760" y="870" width="840" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-25" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;AuthentificationService&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ isValid(jwt: String): boolean&lt;br&gt;+ validateEmail(email: String): boolean&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ validatePassword(password: String): boolean&lt;br&gt;+ check&lt;span style=&quot;background-color: initial;&quot;&gt;Password(bcrypt: String,password: String): boolean&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ register(username: String, email: String, password: String): void&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ updateUser(id:long, username: String, email: String, password: String): void&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ login(email: String, password: String): String&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="C9hfbqxZXzc94mt0s5pp-24">
+          <mxGeometry x="20" y="50" width="430" height="182.5" as="geometry" />
+        </mxCell>
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-33" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Tokenizer&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ key: Key&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ EXPIRATION_TIME: long&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ generateToken(user: User): String&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ parseToken(token: String): Claims&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getBearer(bearer: String): String&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="C9hfbqxZXzc94mt0s5pp-24">
+          <mxGeometry x="550" y="76.25" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-46" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="C9hfbqxZXzc94mt0s5pp-24" source="C9hfbqxZXzc94mt0s5pp-25" target="C9hfbqxZXzc94mt0s5pp-33">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="40" y="160" as="sourcePoint" />
+            <mxPoint x="90" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-30" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="C9hfbqxZXzc94mt0s5pp-1" source="C9hfbqxZXzc94mt0s5pp-28" target="k0RXGG7jA4YN6tqX4Mhr-40">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="520" as="sourcePoint" />
+            <mxPoint x="430" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-31" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.543;entryY=0.991;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="C9hfbqxZXzc94mt0s5pp-1" source="k0RXGG7jA4YN6tqX4Mhr-40" target="C9hfbqxZXzc94mt0s5pp-26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="520" as="sourcePoint" />
+            <mxPoint x="430" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-32" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="C9hfbqxZXzc94mt0s5pp-1" source="C9hfbqxZXzc94mt0s5pp-25" target="k0RXGG7jA4YN6tqX4Mhr-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="950" y="450" as="sourcePoint" />
+            <mxPoint x="1000" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-34" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;de.thowl.klimaralley.server.auth.storage&lt;/span&gt;" style="shape=folder;fontStyle=1;tabWidth=260;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=1;collapsible=0;recursiveResize=0;whiteSpace=wrap;" vertex="1" parent="C9hfbqxZXzc94mt0s5pp-1">
+          <mxGeometry x="770" y="110" width="680" height="410" as="geometry" />
+        </mxCell>
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-35" value="&lt;div&gt;User&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="C9hfbqxZXzc94mt0s5pp-34">
+          <mxGeometry x="73.75" y="50" width="200" height="140" as="geometry">
+            <mxRectangle x="440" y="640" width="110" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-36" value="&lt;div&gt;+ id: long&lt;/div&gt;&lt;div&gt;+ username: String&lt;/div&gt;&lt;div&gt;+ password: String&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ water: int&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ watercoins: int&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="C9hfbqxZXzc94mt0s5pp-35">
+          <mxGeometry y="26" width="200" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-41" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="C9hfbqxZXzc94mt0s5pp-34" source="C9hfbqxZXzc94mt0s5pp-40">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="240" as="sourcePoint" />
+            <mxPoint x="460" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-42" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;UserRepository&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ findByUsername(username: String)&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: User&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ findByEmail(email: String)&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: User&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="C9hfbqxZXzc94mt0s5pp-34">
+          <mxGeometry x="27.5" y="230" width="292.5" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-43" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.499;entryY=0.999;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="C9hfbqxZXzc94mt0s5pp-34" source="C9hfbqxZXzc94mt0s5pp-42" target="C9hfbqxZXzc94mt0s5pp-36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="440" as="sourcePoint" />
+            <mxPoint x="140" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C9hfbqxZXzc94mt0s5pp-47" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="C9hfbqxZXzc94mt0s5pp-1" source="C9hfbqxZXzc94mt0s5pp-42" target="C9hfbqxZXzc94mt0s5pp-25">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="860" y="710" as="sourcePoint" />
+            <mxPoint x="910" y="660" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>

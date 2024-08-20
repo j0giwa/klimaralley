@@ -1,10 +1,10 @@
 # klimaralley
 
 # Project Struckture
-![structure diagramm](https://github.com/j0giwa/klimaralley/blob/master/doc/server_archtecture_diagram.drawio.png?raw=true)
-
-- database
-- klimaralley-server (central backendserver)
+![deployment diagramm](https://github.com/j0giwa/klimaralley/blob/master/doc/deployment.drawio.png?raw=true)
+- midgard (nginx reverse proxy)
+- mimir (database server)
+- klimaralley-server (central backendserver), codename: Asgard
 - klimaralley-hub (main-app that connects the games)
 - klimaralley-recycling (recycling game)
 - klimaralley-wasserarm (wasserarm-satt game)
@@ -21,7 +21,7 @@
 ## backend
 - spring boot
 
-# Development 
+# Development
 A short explanation on how to work on this repository, if you never worked with submodules before.
 A submodule is in a nutshell a Git repostory inside another Git repository, their state is tracked seperately.
 
