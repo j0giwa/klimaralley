@@ -5,6 +5,7 @@ services:
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
       MYSQL_DATABASE: klimaralley
+      MYSQL_INITDB_SKIP_TZINFO: 1
     ports:
       - "3306:3306"
     networks:
@@ -14,6 +15,8 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    volumes:
+      - ./database/klimaralley.sql:/docker-entrypoint-initdb.d/klimaralley.sql
 
   phpmyadmin:
     container_name: phpmyadmin
